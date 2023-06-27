@@ -17,7 +17,7 @@ exports.createPages = async ({ actions, graphql }) => {
     {
       postsRemark: allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { fileAbsolutePath: { regex: "/content/" } }
+        filter: { contentFilePath: { regex: "/content/" } }
         limit: 2000
       ) {
         edges {
